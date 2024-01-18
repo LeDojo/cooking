@@ -4,6 +4,7 @@ import cors from "cors";
 
 import mongoose from "mongoose";
 import userRouter from "./routes/userRoute";
+import subRouter from "./routes/subscriberRoute";
 main().catch((err) => console.log(err));
 
 async function main() {
@@ -22,6 +23,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/users", userRouter);
+app.use("/subscribers", subRouter);
 app.listen(port, () =>
   console.log(`[SERVER] listening at http://localhost:${port}`)
 );
