@@ -1,4 +1,5 @@
 import { Schema, model } from "mongoose";
+import Subscriber from "./subscriberModel";
 
 const userSchema = new Schema(
   {
@@ -37,6 +38,22 @@ const userSchema = new Schema(
 
 userSchema.virtual("fullname").get(function () {
   return `${this.name.first} ${this.name.last}`;
+});
+
+userSchema.pre("save", function (next) {
+  let user = this;
+  if (user.subscribedAccount === undefined) {
+    Subscriber.findOne({ email: user.email })
+      .then((subscriber) => {
+        user.subscribedAccount = subscriber;
+        next();
+      })
+      .catch((error) => {
+        console.log(`Erreur de la connexion subscriber: ${error.message}`);
+      });
+  } else {
+    next();
+  }
 });
 
 const User = model("User", userSchema);
