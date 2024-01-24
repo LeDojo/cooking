@@ -1,5 +1,6 @@
 import { Schema, model } from "mongoose";
 import Subscriber from "./subscriberModel";
+import bcrypt from "bcryptjs";
 
 const userSchema = new Schema(
   {
@@ -40,21 +41,31 @@ userSchema.virtual("fullname").get(function () {
   return `${this.name.first} ${this.name.last}`;
 });
 
-userSchema.pre("save", function (next) {
-  let user = this;
-  if (user.subscribedAccount === undefined) {
-    Subscriber.findOne({ email: user.email })
-      .then((subscriber) => {
-        user.subscribedAccount = subscriber;
-        next();
-      })
-      .catch((error) => {
-        console.log(`Erreur de la connexion subscriber: ${error.message}`);
-      });
-  } else {
+userSchema.pre("save", async function (next) {
+  if (!this.isModified("password")) return next();
+  try {
+    const hashedPassword = await bcrypt.hash(this.password, 10);
+    this.password = hashedPassword;
     next();
+  } catch (error) {
+    next(error);
   }
 });
+// userSchema.pre("save", function (next) {
+//   let user = this;
+//   if (user.subscribedAccount === undefined) {
+//     Subscriber.findOne({ email: user.email })
+//       .then((subscriber) => {
+//         user.subscribedAccount = subscriber;
+//         next();
+//       })
+//       .catch((error) => {
+//         console.log(`Erreur de la connexion subscriber: ${error.message}`);
+//       });
+//   } else {
+//     next();
+//   }
+// });
 
 const User = model("User", userSchema);
 export default User;
