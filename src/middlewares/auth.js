@@ -9,5 +9,7 @@ exports.authMiddleware = (req, res, next) => {
     if (err) {
       return res.status(401).json({ message: "NON-Authorized - Invalid Token"})
     }
+    req.user = decoded
+    next()
   });
 };
