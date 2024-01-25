@@ -5,6 +5,9 @@ import cors from "cors";
 import mongoose from "mongoose";
 import userRouter from "./routes/userRoute";
 import subRouter from "./routes/subscriberRoute";
+
+import { seedCourses } from "./seedCourses";
+// seedCourses()
 main().catch((err) => console.log(err));
 
 async function main() {

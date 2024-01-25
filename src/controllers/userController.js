@@ -31,6 +31,8 @@ export const login = async (req, res) => {
     const user = await User.findOne({ email });
     if (user && (await bcrypt.compare(password, user.password))) {
       const token = jwt.sign({ email: user.email }, process.env.JWT_secret);
+      console.log({ user, token });
+
       res.json({ token });
     } else {
       res.status(401).json({ error: " Vos identifiants sont invalides" });
