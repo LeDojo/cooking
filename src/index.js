@@ -7,6 +7,7 @@ import userRouter from "./routes/userRoute";
 import subRouter from "./routes/subscriberRoute";
 
 import { seedCourses } from "./seedCourses";
+import courseRouter from "./routes/courseRoute";
 // seedCourses()
 main().catch((err) => console.log(err));
 
@@ -27,6 +28,7 @@ app.get("/", (req, res) => {
 
 app.use("/users", userRouter);
 app.use("/subscribers", subRouter);
+app.use("/courses", courseRouter);
 app.listen(port, () =>
   console.log(`[SERVER] listening at http://localhost:${port}`)
 );
