@@ -7,7 +7,7 @@ import userRouter from "./routes/userRoute";
 import subRouter from "./routes/subscriberRoute";
 
 import { seedCourses } from "./seedCourses";
-seedCourses()
+// seedCourses()
 main().catch((err) => console.log(err));
 
 async function main() {
