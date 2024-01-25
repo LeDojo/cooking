@@ -1,0 +1,92 @@
+[
+  {
+    "title": "Cuisine italienne authentique",
+    "description": "Découvrez les secrets de la cuisine italienne avec ce cours qui met l'accent sur les plats authentiques et les techniques traditionnelles.",
+    "maxStudents": 15,
+    "cost": 50
+  },
+  {
+    "title": "Art de la pâtisserie française",
+    "description": "Plongez dans l'univers délicieux de la pâtisserie française. Apprenez à créer des pâtisseries élégantes et savoureuses.",
+    "maxStudents": 12,
+    "cost": 60
+  },
+  {
+    "title": "Cuisine asiatique moderne",
+    "description": "Explorez les saveurs vibrantes de la cuisine asiatique moderne. Des plats exotiques et des techniques contemporaines vous attendent.",
+    "maxStudents": 20,
+    "cost": 45
+  },
+  {
+    "title": "Cours de barbecue maître",
+    "description": "Devenez un maître du barbecue avec ce cours qui vous enseignera les secrets d'une cuisson parfaite en plein air.",
+    "maxStudents": 18,
+    "cost": 55
+  },
+  {
+    "title": "Cuisine végétalienne créative",
+    "description": "Découvrez la diversité et la créativité de la cuisine végétalienne. Apprenez à concocter des plats savoureux sans produits d'origine animale.",
+    "maxStudents": 15,
+    "cost": 50
+  },
+  {
+    "title": "Cours de mixologie artisanale",
+    "description": "Explorez l'art de la mixologie avec ce cours axé sur la création de cocktails artisanaux. Épatez vos amis avec vos nouvelles compétences en bar.",
+    "maxStudents": 14,
+    "cost": 65
+  },
+  {
+    "title": "Cuisine méditerranéenne santé",
+    "description": "Adoptez le mode de vie méditerranéen avec ce cours axé sur une cuisine saine et délicieuse. Apprenez à cuisiner des plats riches en saveurs et bons pour la santé.",
+    "maxStudents": 16,
+    "cost": 55
+  },
+  {
+    "title": "Leçon de sushi expert",
+    "description": "Maîtrisez l'art délicat du sushi avec ce cours qui vous guidera à travers la préparation de sushis traditionnels et créatifs.",
+    "maxStudents": 10,
+    "cost": 70
+  },
+  {
+    "title": "Cuisine fusion exotique",
+    "description": "Explorez le monde de la cuisine fusion avec ce cours qui marie des saveurs et des techniques de cuisson du monde entier.",
+    "maxStudents": 18,
+    "cost": 60
+  },
+  {
+    "title": "Cours de cuisine pour débutants",
+    "description": "Commencez votre aventure culinaire avec ce cours conçu spécialement pour les débutants. Apprenez les bases de la cuisine avec des recettes simples et délicieuses.",
+    "maxStudents": 15,
+    "cost": 40
+  },
+  {
+    "title": "Cours de cuisine pour enfants",
+    "description": "Faites participer les plus jeunes à la cuisine avec ce cours amusant pour enfants. Des recettes simples et ludiques qui éveilleront leur amour pour la cuisine.",
+    "maxStudents": 12,
+    "cost": 35
+  },
+  {
+    "title": "Cours de cuisine rapide et saine",
+    "description": "Pour ceux qui ont un emploi du temps chargé, ce cours vous apprendra à préparer des repas rapides, sains et délicieux en un rien de temps.",
+    "maxStudents": 20,
+    "cost": 50
+  },
+  {
+    "title": "Cours de cuisine pour couples",
+    "description": "Renforcez votre lien avec votre partenaire en apprenant à cuisiner ensemble. Des plats romantiques et une expérience culinaire partagée vous attendent.",
+    "maxStudents": 14,
+    "cost": 75
+  },
+  {
+    "title": "Cours de cuisine de rue",
+    "description": "Découvrez les délices de la cuisine de rue du monde entier. Apprenez à recréer ces saveurs uniques dans votre propre cuisine.",
+    "maxStudents": 16,
+    "cost": 45
+  },
+  {
+    "title": "Art de la découpe des légumes",
+    "description": "Affûtez vos compétences en cuisine en apprenant l'art de la découpe des légumes. Des techniques de coupe professionnelles qui feront de vous un pro de la cuisine.",
+    "maxStudents": 12,
+    "cost": 40
+  }
+]
